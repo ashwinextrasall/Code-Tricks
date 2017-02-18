@@ -7,7 +7,7 @@
     <ProjectGuid>{E6EA50DF-B95C-40CA-93CD-B388BB953A66}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>OOPS_Concepts</RootNamespace>
-    <AssemblyName>OOPS_Concepts</AssemblyName>
+    <AssemblyName>OOPS Concepts</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
