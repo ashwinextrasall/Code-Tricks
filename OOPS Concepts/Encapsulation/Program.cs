@@ -8,47 +8,54 @@ namespace Encapsulation
 {
     class Rectangle
     {
-        //Public Access Specifiers
-        //public double length;
-        //public double breadth;
+        protected double length;
+        protected double width;
 
-        //Private Access Specifiers
-        private double length;
-        private double breadth;
-
-        public double Getlength()
+        public Rectangle(double l,double w)
         {
-            length = 4.5;
-            return length;
-        }
-
-        public double Getbreadth()
-        {
-            breadth= 5.5;
-            return breadth;
+            length = l;
+            width = w;
         }
 
         public double GetArea()
         { 
-            return Getlength() * Getbreadth();
+            return length * width;
         }
 
         public void Display()
         {
-            Console.WriteLine("Length : {0}", Getlength());
-            Console.WriteLine("Width : {0}", Getbreadth());
+            Console.WriteLine("Length : {0}", length);
+            Console.WriteLine("Width : {0}", width);
             Console.WriteLine("Area : {0}",GetArea());
         }
     }
+
+    class TableTop:Rectangle
+    {
+        private double cost;
+        public TableTop(double l=1, double w=1) : base(l, w)
+        { }
+
+        public double GetCost()
+        {
+            double cost;
+            cost = GetArea() * 70;
+            return cost;
+        }
+
+        public void Display()
+        {
+            base.Display();
+            Console.WriteLine("Cost : {0}", GetCost());
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Rectangle rectangleObj = new Rectangle();
-            //Commented to change from public to private access modifiers.
-            //rectangleObj.length = 4.5;
-            //rectangleObj.breadth = 5.5;
-            rectangleObj.Display();
+            TableTop t = new TableTop();
+            t.Display(); 
             Console.ReadKey();
         }
     }
